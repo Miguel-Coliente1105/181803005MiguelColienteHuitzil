@@ -21,8 +21,7 @@ public class Promedio {
         num3 = entrada.nextDouble() ;
         suma = (num1 + num2 + num3) ;
         promedio = (suma/3) ;
-
-System.out.println ("El estudiante aprovo con un promedio de: " +promedio );
+        System.out.println ("El estudiante aprobo con un promedio de: " +promedio );
      }  
     
 }
