@@ -14,12 +14,8 @@ public class NumeroAleatorio {
          System.out.println(numeroAleatorio);*/
           int max = 5; 
           int min = 1; 
-          int range = max - min + 1; 
-       // generate random numbers within 1 to 10 
-           for (int i = 0; i < 10; i++) { 
-                int rand = (int)(Math.random() * range) + min;
-            // Output is different everytime this code is executed 
-                System.out.println(rand); 
-     }
-    } 
-}
+          int range = max - min + 1;
+          int rand=(int)(Math.random()*range)+min;
+          System.out.println(rand); 
+   }
+} 
