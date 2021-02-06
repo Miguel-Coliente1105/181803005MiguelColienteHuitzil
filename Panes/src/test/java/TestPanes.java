@@ -32,14 +32,14 @@ public class TestPanes {
         System.out.println("Ingresa el precio del pan : ");
         String precio = scanner.nextLine();
 
-        Panes pan = new Panes(nombre, tipo, codigoB,tamanio, precio);
+        
         
         Panes blanco= new Panes ("pan blanco", "natural", 23.61, "bln123","chico" ); 
         Panes linaza= new Panes ("artesano", "linaza", 38.10, "arli147", "grande");
         Panes multigrano= new Panes("integral", "multigrano", 29.30,"inmul56","mediano");
         Panes dobleFibra=new Panes("silueta", "doble fibra", 41.10, "doF58", "grande");
-        
-        System.out.println(blanco+"\n"+linaza+"\n"+multigrano+"\n"+dobleFibra); 
+        Panes pan = new Panes(nombre, tipo, codigoB,tamanio, precio);
+        System.out.println(blanco+"\n"+linaza+"\n"+multigrano+"\n"+dobleFibra+pan); 
     }
     
 }
