@@ -9,12 +9,12 @@
  * @author maluisa
  */
 public class Pelicula {
-        public String titulo, director, genero, casaProductora, clasificacion;
-        public int año;
-        public double duracion;
-        public boolean subtitulos;
+ public String titulo, director, genero, casaProductora, clasificacion;
+    public int año;
+    public double duracion;
+    public boolean subtitulos;
     
-        public Pelicula(){
+    public Pelicula(){
         this.año = 0;
         this.casaProductora = "";
         this.clasificacion = "";
@@ -25,7 +25,7 @@ public class Pelicula {
         this.titulo = "";
     }
     
-        public Pelicula(String titulo, String director, String genero, String casaProductora, String clasificacion, int año, double duracion, boolean subtitulos){
+    public Pelicula(String titulo, String director, String genero, String casaProductora, String clasificacion, int año, double duracion, boolean subtitulos){
         this.año = año;
         this.casaProductora = casaProductora;
         this.clasificacion = clasificacion;
@@ -35,12 +35,12 @@ public class Pelicula {
         this.subtitulos = subtitulos;
         this.titulo = titulo;
     }
-        
-        public Pelicula(String titulo){
+    
+    public Pelicula(String titulo){
         this.titulo = titulo;
     }
-        @Override
-        public String toString(){
+    @Override
+    public String toString(){
         return "Titulo: "+titulo+"\nDirector: "+director+"\nClasificacion: "+clasificacion+"\nCasa productora: "+casaProductora+"\nGenero: "+genero+"\nAño: "+año+"\nDuracion: "+duracion+"\nSutitulos: "+subtitulos;
     }
 }

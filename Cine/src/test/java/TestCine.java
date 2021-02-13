@@ -1,5 +1,4 @@
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -21,7 +20,8 @@ public class TestCine {
                
         Scanner scanner = new Scanner(System.in);
         String titulo;
-        int espera = 1;
+        int espera = 1,horaIni,horaFin;
+       
         Cine cine = new Cine("love", 9, 11);
         //ArrayList<Pelicula> peliculas = new ArrayList();
         
@@ -34,11 +34,14 @@ public class TestCine {
             cine.agregarPelicula(pelicula);
             System.out.println("para continuar ingrese 1");
             espera = scanner.nextInt();   
-
-       
         }
        // Cine cine = new Cine("love", 9, 11, peliculas);
         System.out.println(cine.imprimirPeliculas());
+        System.out.println(cine.menu());
+        System.out.println("Numero de peliculas guardadas:"+cine.numeroPeliculas());
+        System.out.println("Ingresar una hora para ver si esta abierto: ");
+        horaIni = scanner.nextInt();
+        System.out.println(cine.abierto(horaIni));
     }
     
 }
