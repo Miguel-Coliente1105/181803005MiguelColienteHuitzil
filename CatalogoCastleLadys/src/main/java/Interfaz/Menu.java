@@ -16,6 +16,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -75,6 +76,11 @@ public class Menu extends javax.swing.JFrame {
         jButtonEliminar.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jButtonEliminar.setText("(-) Eliminar Bolsa.");
         jButtonEliminar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 255), new java.awt.Color(255, 153, 255), new java.awt.Color(255, 153, 255), new java.awt.Color(255, 153, 255)));
+        jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEliminarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setBackground(new java.awt.Color(255, 102, 255));
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -87,6 +93,11 @@ public class Menu extends javax.swing.JFrame {
         jButtonLista.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
         jButtonLista.setText("(¤)Mostrar Bolsas");
         jButtonLista.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 153, 255), new java.awt.Color(255, 153, 255), new java.awt.Color(255, 153, 255), new java.awt.Color(255, 153, 255)));
+        jButtonLista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonListaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,11 +145,31 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButtonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarActionPerformed
         // TODO add your handling code here:
+        Actualizar actualizar= new Actualizar();
+        actualizar.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonActualizarActionPerformed
 
     private void jButtonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarActionPerformed
-        // TODO add your handling code here:
+       AgregarBolsa agregar= new AgregarBolsa();
+       agregar.setVisible(true);
+       this.setVisible(false);
+
     }//GEN-LAST:event_jButtonAgregarActionPerformed
+
+    private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
+        // TODO add your handling code here:
+        Eliminar eliminar= new Eliminar();
+        eliminar.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonEliminarActionPerformed
+
+    private void jButtonListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListaActionPerformed
+        // TODO add your handling code here:
+        Lista lista= new Lista();
+        lista.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonListaActionPerformed
 
     /**
      * @param args the command line arguments

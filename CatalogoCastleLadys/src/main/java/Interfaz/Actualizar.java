@@ -34,6 +34,7 @@ public class Actualizar extends javax.swing.JFrame {
      */
     public Actualizar() {
         initComponents();
+        this.setLocationRelativeTo(null);
         try{
             this.crearModelo();
         } catch (SQLException ex){
@@ -69,6 +70,8 @@ public class Actualizar extends javax.swing.JFrame {
         jListActualizarLista = new javax.swing.JList<>();
         jLabelID = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jButtonVolverMenu = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -115,6 +118,15 @@ public class Actualizar extends javax.swing.JFrame {
 
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jButtonVolverMenu.setText("Menu");
+        jButtonVolverMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVolverMenuActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Volver a");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -151,7 +163,10 @@ public class Actualizar extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonVolverMenu)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButtonActualizar))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -168,7 +183,11 @@ public class Actualizar extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonActualizar)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel2)
+                                .addComponent(jButtonVolverMenu))
+                            .addComponent(jButtonActualizar))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,6 +285,13 @@ public class Actualizar extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonActualizarActionPerformed
 
+    private void jButtonVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverMenuActionPerformed
+        // TODO add your handling code here:
+        Menu menu= new Menu();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonVolverMenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -303,7 +329,9 @@ public class Actualizar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonActualizar;
+    private javax.swing.JButton jButtonVolverMenu;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelActualizar;
     private javax.swing.JLabel jLabelActualizarColor;
     private javax.swing.JLabel jLabelActualizarMaterial;
