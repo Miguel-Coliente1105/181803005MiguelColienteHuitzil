@@ -21,6 +21,7 @@ public class AgregarBolsa extends javax.swing.JFrame {
      */
     public AgregarBolsa() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -48,6 +49,8 @@ public class AgregarBolsa extends javax.swing.JFrame {
         jLabelModelo = new javax.swing.JLabel();
         jTextFieldModelo = new javax.swing.JTextField();
         jTextFieldTamanio = new javax.swing.JTextField();
+        jButtonVolverMenu = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jEditorPane1);
 
@@ -80,17 +83,23 @@ public class AgregarBolsa extends javax.swing.JFrame {
 
         jLabelModelo.setText("Modelo");
 
+        jButtonVolverMenu.setText("Menu");
+        jButtonVolverMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVolverMenuActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Volver a");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonAgregar))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
@@ -110,7 +119,13 @@ public class AgregarBolsa extends javax.swing.JFrame {
                                     .addComponent(jTextFieldPrecio)
                                     .addComponent(jTextFieldModelo, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                                     .addComponent(jTextFieldTamanio))))
-                        .addGap(0, 52, Short.MAX_VALUE)))
+                        .addGap(0, 52, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonVolverMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
+                        .addComponent(jButtonAgregar)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -142,8 +157,11 @@ public class AgregarBolsa extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelModelo)
                     .addComponent(jTextFieldModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jButtonAgregar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAgregar)
+                    .addComponent(jLabel1)
+                    .addComponent(jButtonVolverMenu))
                 .addGap(24, 24, 24))
         );
 
@@ -187,6 +205,13 @@ public class AgregarBolsa extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAgregarActionPerformed
 
+    private void jButtonVolverMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverMenuActionPerformed
+        // TODO add your handling code here:
+        Menu menu= new Menu();
+        menu.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButtonVolverMenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -224,7 +249,9 @@ public class AgregarBolsa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAgregar;
+    private javax.swing.JButton jButtonVolverMenu;
     private javax.swing.JEditorPane jEditorPane1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelAgregar;
     private javax.swing.JLabel jLabelColor;
     private javax.swing.JLabel jLabelMaterialBolsa;
